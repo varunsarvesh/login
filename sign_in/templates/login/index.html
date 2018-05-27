@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in page</title>
+</head>
+<body>
+
+<h1> Sign In </h1>
+<form action="{% url 'verify' %}" method="POST" >
+    {% csrf_token %}
+    {{ form }}
+    <!--Enter your username <input type="text" name="name"><br><br>-->
+    <!--Enter your password <input type="password" name="password"><br><br>-->
+    <input type="submit" value="Sign in"><br><br><br><br>
+    <center><a href="{% url 'sign_up' %}"> Sign up </a></center>
+</form>
+</body>
+</html>
